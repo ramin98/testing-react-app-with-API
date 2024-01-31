@@ -13,6 +13,10 @@ let inventory = {
   '1': { id: 1, name: 'Test Product', quantity: 100 }
 };
 
+app.post('/api/inventory', (req, res) => {
+      res.json(inventory);
+});
+
 // Эндпоинт для уменьшения количества товара
 app.post('/api/inventory/:productId/reduce', (req, res) => {
   const { productId } = req.params;
