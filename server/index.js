@@ -13,7 +13,7 @@ let inventory = {
   '1': { id: 1, name: 'Test Product', quantity: 100 }
 };
 
-app.post('/api/inventory', (req, res) => {
+app.get('/api/inventory', (req, res) => {
       res.json(inventory);
 });
 
